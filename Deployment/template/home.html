@@ -1,0 +1,126 @@
+<head>
+  <title>Form Contest</title>
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+  color: #092922;
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+  padding-top: 40px;
+}
+#main-container{
+  border: 2px solid #2ABB9B;
+  background: #FAFAFA;
+  border-radius: 5px;
+  text-align: center;
+  height: 100%;
+  width: 60%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px 20px 70px 20px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 0px #249E83;
+  -moz-box-shadow: 0px 5px 0px #249E83;
+  box-shadow: 0px 4px 0px #249E83;
+}
+#contact-form{
+  max-width: 500px;
+  margin: 0 auto;
+}
+h1{
+  font-size: 4em;
+}
+
+input[type=text], textarea {
+  display: block;
+  outline: none;
+  width: 96%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #2ABB9B;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-family: 'Dosis', sans-serif;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 8px #2ABB9B;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  font-size: 1.55em;
+}
+input[type=submit]{
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+  background: #2ABB9B;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2em;
+  color: #092922;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0px 5px 0px #249E83;
+  -moz-box-shadow: 0px 5px 0px #249E83;
+  box-shadow: 0px 5px 0px #249E83;
+}
+input[type=submit]:hover{
+  color: #FFF;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+input[type=button]:active{
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  top: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input[type=button]:focus{
+  position: relative;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  outline: none;
+}
+#result{
+    margin-top: 100px;
+}
+
+    </style>
+</head>
+<body>
+  <div id="main-container">
+ <h1>Discover comments</h1>
+        <br>
+        <h3>This service helps you to discover the field of a comment review.</h3>
+      <form id="contact-form" action="{{ url_for('predict')}}"method="post">
+      <textarea name="usr" rows="5" cols="50" placeholder="Enter the Comment review"></textarea>
+      <input type="submit" value = "PREDICT"/>
+    </form>
+
+     <div class="itemx">
+        <div>
+
+          <p> <h3 id="result" >Verification : {{ val }}</h3></p>
+             <br>
+        </div>
+      </div>
+  </div>
+
+</body>
