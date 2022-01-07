@@ -1,4 +1,4 @@
-# DS_NPL_Chatbot
+# DS_NLP_Chatbot
 <img width="513" alt="Screen Shot 1443-05-18 at 9 09 02 PM" src="https://user-images.githubusercontent.com/75619142/147136656-fd171b0f-cbc2-4cca-b7ca-b3574acbfb07.png">
 
 #### Perfect brief for DS intelligent systems
